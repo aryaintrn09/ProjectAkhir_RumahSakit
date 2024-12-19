@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtPatientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Patient Name" />
+
+    <EditText
+        android:id="@+id/edtDoctorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Doctor Name" />
+
+    <EditText
+        android:id="@+id/edtBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bill Amount"
+        android:inputType="numberDecimal" />
+
+    <Spinner
+        android:id="@+id/spinnerPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/payment_methods" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvCashierHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cashier History"
+        android:textStyle="bold"
+        android:paddingTop="16dp" />
+
+    <ListView
+        android:id="@+id/lvCashierHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

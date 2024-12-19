@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">hospitalapp</string>
+    <string-array name="payment_methods">
+        <item>Cash</item>
+        <item>Debit</item>
+    </string-array>
+</resources>
