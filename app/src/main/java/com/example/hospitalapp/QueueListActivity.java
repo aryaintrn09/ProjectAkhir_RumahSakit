@@ -1,11 +1,11 @@
 package com.example.hospitalapp;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +35,14 @@ public class QueueListActivity extends AppCompatActivity implements PatientAdapt
 
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.recycler_view_item_spacing);
         recyclerViewQueueList.addItemDecoration(new SpacingItemDecoration(spacingInPixels));
+
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override

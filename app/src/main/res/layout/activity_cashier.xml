@@ -5,6 +5,13 @@
     android:padding="16dp"
     android:background="#abdbe3">
 
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="47dp"
+        android:layout_height="58dp"
+        android:src="@drawable/ic_back"
+        android:background="@android:color/transparent" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -79,4 +86,6 @@
         android:id="@+id/lvCashierHistory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+
 </LinearLayout>
