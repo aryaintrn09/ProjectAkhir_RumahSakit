@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="Button"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+        android:drawableTop="@drawable/ic_placeholder"
+        android:padding="16dp"
+        android:textSize="18sp" />
+</LinearLayout>

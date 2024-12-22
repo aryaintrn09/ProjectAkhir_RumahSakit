@@ -1,26 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#abdbe3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/edtUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:hint="Username"
+        android:background="@drawable/rounded_background"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:background="@drawable/rounded_background"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register" />
+        android:text="Register"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

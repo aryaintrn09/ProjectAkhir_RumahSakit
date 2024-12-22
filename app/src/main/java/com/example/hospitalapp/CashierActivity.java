@@ -27,8 +27,7 @@ public class CashierActivity extends AppCompatActivity {
         Button btnSubmit = findViewById(R.id.btnSubmit);
 
         historyItems = new ArrayList<>();
-        historyItems.add(new CashierHistoryItem("John Doe", "Dr. Smith", 150.0, "Credit Card"));
-        historyItems.add(new CashierHistoryItem("Jane Roe", "Dr. Brown", 200.0, "Cash"));
+
 
         adapter = new CashierHistoryAdapter(this, historyItems);
         lvCashierHistory.setAdapter(adapter);

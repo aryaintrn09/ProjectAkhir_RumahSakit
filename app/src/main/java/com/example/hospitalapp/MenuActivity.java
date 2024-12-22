@@ -2,47 +2,46 @@ package com.example.hospitalapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.Arrays;
+import java.util.List;
 
 public class MenuActivity extends AppCompatActivity {
-    Button btnDoctorSchedule, btnQueueList, btnUserProfile, btnAdminQueueList, btnCashier, btnLogout;
+
+    RecyclerView recyclerViewMenu;
+    List<String> menuItems = Arrays.asList("Doctor Schedule", "Register Patient", "User Profile", "Queue List", "Cashier", "Logout");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        btnDoctorSchedule = findViewById(R.id.btnDoctorSchedule);
-        btnQueueList = findViewById(R.id.btnQueueList);
-        btnUserProfile = findViewById(R.id.btnUserProfile);
-        btnAdminQueueList = findViewById(R.id.btnAdminQueueList);
-        btnCashier = findViewById(R.id.btnCashier);
-        btnLogout = findViewById(R.id.btnLogout);
+        recyclerViewMenu = findViewById(R.id.recyclerViewMenu);
+        recyclerViewMenu.setLayoutManager(new GridLayoutManager(this, 2)); // 2 columns
 
-        btnDoctorSchedule.setOnClickListener(view -> {
-            startActivity(new Intent(MenuActivity.this, DoctorScheduleActivity.class));
+        MenuAdapter adapter = new MenuAdapter(this, menuItems, item -> {
+            switch (item) {
+                case "Doctor Schedule":
+                    startActivity(new Intent(MenuActivity.this, DoctorScheduleActivity.class));
+                    break;
+                case "Register Patient":
+                    startActivity(new Intent(MenuActivity.this, RegisterPasien.class));
+                    break;
+                case "Queue List":
+                    startActivity(new Intent(MenuActivity.this, QueueListActivity.class));
+                    break;
+                case "Cashier":
+                    startActivity(new Intent(MenuActivity.this, CashierActivity.class));
+                    break;
+                case "Logout":
+                    startActivity(new Intent(MenuActivity.this, LoginActivity.class));
+                    finish();
+                    break;
+            }
         });
 
-        btnQueueList.setOnClickListener(view -> {
-            startActivity(new Intent(MenuActivity.this, RegisterPasien.class));
-        });
-
-        btnUserProfile.setOnClickListener(view -> {
-            startActivity(new Intent(MenuActivity.this, UserProfileActivity.class));
-        });
-
-        btnAdminQueueList.setOnClickListener(view -> {
-            startActivity(new Intent(MenuActivity.this, QueueListActivity.class));
-        });
-
-        btnCashier.setOnClickListener(view -> {
-            startActivity(new Intent(MenuActivity.this, CashierActivity.class));
-        });
-
-        btnLogout.setOnClickListener(view -> {
-            startActivity(new Intent(MenuActivity.this, LoginActivity.class));
-            finish();
-        });
+        recyclerViewMenu.setAdapter(adapter);
     }
 }

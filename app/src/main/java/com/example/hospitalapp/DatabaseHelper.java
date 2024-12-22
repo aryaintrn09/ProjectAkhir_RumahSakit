@@ -51,6 +51,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean checkUser(String username, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username = ? AND password = ?", new String[]{username, password});
-        return cursor.getCount() > 0;
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        return exists;
+    }
+
+    public Cursor getAllPatients() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM user_details", null);
+    }
+
+    public void deletePatient(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("user_details", "id = ?", new String[]{String.valueOf(id)});
+        db.close();
     }
 }

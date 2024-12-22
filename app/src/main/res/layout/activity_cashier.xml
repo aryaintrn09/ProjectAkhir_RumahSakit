@@ -2,39 +2,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#abdbe3">
 
-    <EditText
-        android:id="@+id/edtPatientName"
-        android:layout_width="match_parent"
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Patient Name" />
+        android:text="CASHIER"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/edtDoctorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Doctor Name" />
+        android:hint="Doctor Name"
+        android:background="@drawable/rounded_edittext"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/edtPatientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Patient Name"
+        android:background="@drawable/rounded_edittext"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:id="@+id/edtBillAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Bill Amount"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:background="@drawable/rounded_edittext"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
 
     <Spinner
         android:id="@+id/spinnerPaymentMethod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/payment_methods" />
+        android:entries="@array/payment_methods"
+        android:background="@drawable/rounded_spinner"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/tvCashierHistory"

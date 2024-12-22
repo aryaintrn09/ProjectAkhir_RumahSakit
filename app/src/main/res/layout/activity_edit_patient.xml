@@ -3,13 +3,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#abdbe3"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#abdbe3">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DAFTAR ANTRIAN"
+        android:text="EDIT DATA"
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
@@ -17,7 +17,7 @@
         android:layout_gravity="center_horizontal" />
 
     <EditText
-        android:id="@+id/edtFullName"
+        android:id="@+id/etFullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Full Name"
@@ -28,7 +28,7 @@
         android:layout_gravity="center_horizontal" />
 
     <EditText
-        android:id="@+id/edtGender"
+        android:id="@+id/etGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Gender"
@@ -39,7 +39,7 @@
         android:layout_gravity="center_horizontal" />
 
     <EditText
-        android:id="@+id/edtAge"
+        android:id="@+id/etAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Age"
@@ -51,7 +51,7 @@
         android:layout_gravity="center_horizontal" />
 
     <EditText
-        android:id="@+id/edtAddress"
+        android:id="@+id/etAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Address"
@@ -62,7 +62,7 @@
         android:layout_gravity="center_horizontal" />
 
     <EditText
-        android:id="@+id/edtComplaint"
+        android:id="@+id/etComplaint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Complaint"
@@ -73,12 +73,13 @@
         android:layout_gravity="center_horizontal" />
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginTop="16dp"
+        android:text="Save"
         android:background="@drawable/rounded_button"
         android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
