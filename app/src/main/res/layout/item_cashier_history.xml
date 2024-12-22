@@ -3,30 +3,43 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="8dp"
+    android:background="@drawable/border_black">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Kasir :"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp" />
 
     <TextView
         android:id="@+id/tvPatientName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Patient Name" />
+        android:text="Patient Name"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/tvDoctorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Doctor Name" />
+        android:text="Doctor Name"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/tvBillAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bill Amount" />
+        android:text="Bill Amount"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/tvPaymentMethod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Payment Method" />
+        android:text="Payment Method"
+        android:gravity="center" />
 
 </LinearLayout>
