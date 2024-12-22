@@ -26,10 +26,10 @@ public class CashierHistoryAdapter extends ArrayAdapter<CashierHistoryItem> {
         TextView tvBillAmount = convertView.findViewById(R.id.tvBillAmount);
         TextView tvPaymentMethod = convertView.findViewById(R.id.tvPaymentMethod);
 
-        tvPatientName.setText(item.getPatientName());
-        tvDoctorName.setText(item.getDoctorName());
-        tvBillAmount.setText(String.valueOf(item.getBillAmount()));
-        tvPaymentMethod.setText(item.getPaymentMethod());
+        tvPatientName.setText("Nama Pasien : " + item.getPatientName());
+        tvDoctorName.setText("Nama Dokter : " + item.getDoctorName());
+        tvBillAmount.setText("Jumlah : " + String.valueOf(item.getBillAmount()));
+        tvPaymentMethod.setText("Jenis Pembayaran : " + item.getPaymentMethod());
 
         return convertView;
     }

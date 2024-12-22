@@ -46,9 +46,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
             case "Register Patient":
                 holder.btnMenuItem.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.edit, 0, 0);
                 break;
-            case "User Profile":
-                holder.btnMenuItem.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.user, 0, 0);
-                break;
             case "Queue List":
                 holder.btnMenuItem.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.queue, 0, 0);
                 break;

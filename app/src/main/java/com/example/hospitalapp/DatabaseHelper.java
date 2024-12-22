@@ -1,3 +1,4 @@
+// DatabaseHelper.java
 package com.example.hospitalapp;
 
 import android.content.ContentValues;
@@ -18,12 +19,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT)");
         db.execSQL("CREATE TABLE user_details (id INTEGER PRIMARY KEY AUTOINCREMENT, fullName TEXT, gender TEXT, age INTEGER, address TEXT, complaint TEXT)");
+        db.execSQL("CREATE TABLE cashier_history (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_name TEXT, doctor_name TEXT, bill_amount REAL, payment_method TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS users");
         db.execSQL("DROP TABLE IF EXISTS user_details");
+        db.execSQL("DROP TABLE IF EXISTS cashier_history");
         onCreate(db);
     }
 
@@ -65,5 +68,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("user_details", "id = ?", new String[]{String.valueOf(id)});
         db.close();
+    }
+
+    public boolean insertCashierHistory(String patientName, String doctorName, double billAmount, String paymentMethod) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("patient_name", patientName);
+        values.put("doctor_name", doctorName);
+        values.put("bill_amount", billAmount);
+        values.put("payment_method", paymentMethod);
+        long result = db.insert("cashier_history", null, values);
+        return result != -1;
+    }
+
+    public Cursor getAllCashierHistory() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM cashier_history", null);
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 public class MenuActivity extends AppCompatActivity {
 
     RecyclerView recyclerViewMenu;
-    List<String> menuItems = Arrays.asList("Doctor Schedule", "Register Patient", "User Profile", "Queue List", "Cashier", "Logout");
+    List<String> menuItems = Arrays.asList("Doctor Schedule", "Register Patient", "Queue List", "Cashier", "Logout");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
