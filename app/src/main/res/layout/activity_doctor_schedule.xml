@@ -65,7 +65,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dr. John Doe"
+                    android:text="Arya"
                     android:padding="8dp"
                     android:gravity="center" />
                 <TextView
@@ -86,34 +86,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dr. John Doe"
+                    android:text="Adit"
                     android:padding="8dp"
                     android:gravity="center" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Monday"
-                    android:padding="8dp"
-                    android:gravity="center" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="10:00 AM - 12:00 PM"
-                    android:padding="8dp"
-                    android:gravity="center" />
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dr. John Doe"
-                    android:padding="8dp"
-                    android:gravity="center" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Monday"
+                    android:text="Tuesday"
                     android:padding="8dp"
                     android:gravity="center" />
                 <TextView
@@ -128,13 +107,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dr. John Doe"
+                    android:text="Wahyu"
                     android:padding="8dp"
                     android:gravity="center" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Monday"
+                    android:text="Wednesday"
                     android:padding="8dp"
                     android:gravity="center" />
                 <TextView
@@ -149,13 +128,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dr. John Doe"
+                    android:text="Putu"
                     android:padding="8dp"
                     android:gravity="center" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Monday"
+                    android:text="Thursday"
                     android:padding="8dp"
                     android:gravity="center" />
                 <TextView
@@ -166,7 +145,47 @@
                     android:gravity="center" />
             </TableRow>
 
-            <!-- Repeat TableRow for each schedule -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yoga"
+                    android:padding="8dp"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friday"
+                    android:padding="8dp"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 AM - 12:00 PM"
+                    android:padding="8dp"
+                    android:gravity="center" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Savio"
+                    android:padding="8dp"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saturday"
+                    android:padding="8dp"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 AM - 12:00 PM"
+                    android:padding="8dp"
+                    android:gravity="center" />
+            </TableRow>
 
         </TableLayout>
 
